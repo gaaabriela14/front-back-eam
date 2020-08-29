@@ -4,8 +4,8 @@ services:
     mongo:
         image: mongo:latest
         environment:
-          POSTGRES_USER: mongo
-          POSTGRES_PASSWORD: mongo   
+          MONGO_USER: mongo
+          MONGO_PASSWORD: mongo   
         ports:
           - 5436:5432
 
