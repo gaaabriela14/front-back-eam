@@ -3,9 +3,13 @@
 Para la conexion de la base de datos
 
 -Puerto: 30000
+
 -Host: localhost
+
 -Database: postgres
+
 -Usuario: postgres
+
 -Contraseña: postgres
 
 #NodePort
