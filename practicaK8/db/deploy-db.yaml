@@ -40,4 +40,3 @@ spec:
       - name: postgres-volum-mount
         persistentVolumeClaim:
            claimName: postgres-pvc
-
