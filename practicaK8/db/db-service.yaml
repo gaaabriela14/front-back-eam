@@ -10,5 +10,5 @@ spec:
     app: db
   ports:
    - protocol: TCP
-     nodePort: 30000
+     nodePort: 30300
      port: 5432

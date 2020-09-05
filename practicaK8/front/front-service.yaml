@@ -10,5 +10,5 @@ spec:
     app: front
   ports:
    - protocol: TCP
-     nodePort: 30001
+     nodePort: 30302
      port: 8000

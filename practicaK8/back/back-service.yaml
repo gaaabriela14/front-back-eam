@@ -10,5 +10,5 @@ spec:
     app: back
   ports:
    - protocol: TCP
-     nodePort: 30002
+     nodePort: 30301
      port: 5000
