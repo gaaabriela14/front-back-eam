@@ -7,24 +7,25 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
     ports:
-      - 5436:5432
+      - "5432:5432"
 
-  rust:
-    image: gachu/front-eam:latest
+  react:
+    image: gachu/front-react:1.0
     ports: 
-      - 8000:8000
-    depends_on:
-      - postgres_db
-    
-  net:
+      - 4100:4100
+    environment:
+      API: http://localhost:8000/api
+
+  laravel:
     image: gachu/back-eam:1.0
     environment: 
-      DB_NAME: postgres
-      DB_USER: postgres
-      DB_PASS: postgres
+      DB_CONNECTION: pgsql
       DB_HOST: 'postgres_db'
       DB_PORT: 5432
+      DB_DATABASE: postgres
+      DB_USERNAME: postgres
+      DB_PASSWORD: postgres
     ports: 
-      - 5000:5000
+      - 8000:8000
     depends_on:
       - postgres_db

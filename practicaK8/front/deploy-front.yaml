@@ -13,6 +13,6 @@ spec:
     spec:
       containers:
         - name: front
-          image: gachu/front-eam:latest
+          image: gachu/front-react:1.0
           ports:
-            - containerPort: 8000
+            - containerPort: 4100

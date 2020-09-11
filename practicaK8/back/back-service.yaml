@@ -11,4 +11,4 @@ spec:
   ports:
    - protocol: TCP
      nodePort: 30301
-     port: 5000
+     port: 8000

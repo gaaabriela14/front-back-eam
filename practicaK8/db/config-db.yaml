@@ -4,5 +4,4 @@ metadata:
     name: db-config
 data:
     db_name: postgres
-    db_host: postgres_db
     db_port: "5432"
