@@ -13,6 +13,17 @@ spec:
     spec:
       containers:
         - name: front
-          image: gachu/front-react:1.0
+          image: gachu/front-react:v1.0
           ports:
             - containerPort: 4100
+          env:
+            - name: API
+              valueFrom:
+                configMapKeyRef:
+                  name: config-front
+                  key: API
+            - name: PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: config-front
+                  key: PORT

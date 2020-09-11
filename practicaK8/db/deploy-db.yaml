@@ -32,11 +32,3 @@ spec:
                 secretKeyRef:
                   name: db-secret
                   key: db_pass
-          volumeMounts:
-            - mountPath: /var/lib/postgresql/data
-              name: db-mount
-              subPath: db
-      volumes:
-      - name: db-mount
-        persistentVolumeClaim:
-          claimName: db           
