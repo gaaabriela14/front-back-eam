@@ -1,0 +1,29 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: db
+  labels:
+    name: db
+spec:
+  capacity:
+    storage: 100M
+  storageClassName: standard
+  accessModes:
+    - ReadWriteOnce
+  gcePersistentDisk:
+    pdName: disco-gabriela
+    fsType: ext4
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: db
+  labels:
+    type: db
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 100M
+  volumeName: db
