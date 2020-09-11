@@ -2,7 +2,7 @@
 
 Para la conexion de la base de datos
 
--Puerto: 30000
+-Puerto: 30300
 
 -Host: localhost
 
@@ -14,8 +14,8 @@ Para la conexion de la base de datos
 
 #NodePort
 
-Para ver el front visitar http://localhost:30001
+Para ver el front visitar http://localhost:30302
 
-#ClusterIp
+#NodePort
 
-Para ver el Swagger del backend visitar http://localhost:5000
+Para ver el backend visitar http://localhost:30303
