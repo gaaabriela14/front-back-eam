@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: front
+  name: front-deploy
 spec:
   selector:
     matchLabels:
-      app: front
+      app: front-deploy
   template:
     metadata:
       labels:
-        app: front
+        app: front-deploy
     spec:
       containers:
-        - name: front
-          image: gachu/front-react:v1.0
+        - name: front-deploy
+          image: DOCKER_IMAGE:TAG
           ports:
             - containerPort: 4100
           env:

@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: back
+  name: back-deploy
   labels:
-    app: back
+    app: back-deploy
 spec:
   selector:
     matchLabels:
-      app: back
+      app: back-deploy
   template:
     metadata:
       labels:
-        app: back
+        app: back-deploy
     spec:
       containers:
-        - name: back
-          image: gachu/back-eam:1.0
+        - name: back-deploy
+          image: DOCKER_IMAGE:TAG
           ports:
           - containerPort: 8000
           env:
